@@ -1,6 +1,6 @@
 BikeTrackerKrk::Application.routes.draw do
 
-  put '/route' => 'routes#save_route'
+  post '/route' => 'routes#save_route'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
