@@ -12,4 +12,8 @@ class RoutesController < ApplicationController
   def index
     @routes = Route.all
   end
+
+  def show_xml
+    @routes = Route.all
+  end
 end
