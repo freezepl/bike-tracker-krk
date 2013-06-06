@@ -1,6 +1,7 @@
 BikeTrackerKrk::Application.routes.draw do
 
   post '/save-route' => 'routes#save_route'
+  get '/routes' => 'routes#index'
   root :to => 'home#index'
   # The priority is based upon order of creation:
   # first created -> highest priority.
