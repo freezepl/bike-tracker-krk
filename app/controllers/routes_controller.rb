@@ -1,4 +1,5 @@
 class RoutesController < ApplicationController
+  skip_before_filter :verify_authenticity_token
   def save_route
     @route = Route.new(:uuid => params[:uuid], :locations => params[:locations])
     if @route.save
