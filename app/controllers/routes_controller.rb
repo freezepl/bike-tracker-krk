@@ -8,4 +8,8 @@ class RoutesController < ApplicationController
       render :nothing => true, :status => :unprocessable_entity
     end
   end
+
+  def index
+    @routes = Route.all
+  end
 end

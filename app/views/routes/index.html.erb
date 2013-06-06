@@ -1,0 +1,16 @@
+<table>
+  <thead>
+    <td>ID</td>
+    <td>Locations</td>
+  </thead>
+  <%= @routes.each do |route| %>
+  <tr>
+    <td><%= route.uuid %></td>
+    <td>
+      <% route.locations.each do |loc| %>
+        <%= loc %> <br>
+      <% end %>
+    </td>
+  </tr>
+  <% end %>
+</table>
