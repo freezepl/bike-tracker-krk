@@ -3,14 +3,12 @@
   var map, pointarray, heatmap;
 
   var taxiData = [
-    <% count = @routes.count %>
-    <% @routes.each_with_index do |loc, index| %>
-      <% if (index + 1) != count %>
+    <% @routes.each do |route| %>
+      <% route.locations.each do |loc| %>
         new google.maps.LatLng(<%= loc[1] %>, <%= loc[2] %>),
-      <% else %>
-        new google.maps.LatLng(<%= loc[1] %>, <%= loc[2] %>)
       <% end %>
     <% end %>
+    new google.maps.LatLng(50.06178, 19.93759)
   ];
 
   function initialize() {
