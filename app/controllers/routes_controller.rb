@@ -13,6 +13,10 @@ class RoutesController < ApplicationController
     @routes = Route.all
   end
 
+  def map
+    @routes = Route.all
+  end
+
   def show_xml
     @routes = Route.all
   end

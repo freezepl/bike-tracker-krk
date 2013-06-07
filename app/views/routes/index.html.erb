@@ -1,16 +1,20 @@
 <table>
   <thead>
+    <td>Index</td>
     <td>ID</td>
     <td>Locations</td>
+    <td>Created</td>
   </thead>
-  <%= @routes.each do |route| %>
-  <tr>
-    <td><%= route.uuid %></td>
-    <td>
-      <% route.locations.each do |loc| %>
-        <%= loc %> <br>
-      <% end %>
-    </td>
-  </tr>
+  <%= @routes.each_with_index do |route, index| %>
+    <tr>
+      <td><%= index + 1 %></td>
+      <td><%= route.uuid %></td>
+      <td>
+        <% route.locations.each do |loc| %>
+          <%= loc %> <br>
+        <% end %>
+      </td>
+      <td><%= route.created_at %></td>
+    </tr>
   <% end %>
 </table>
