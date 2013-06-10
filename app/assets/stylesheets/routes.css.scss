@@ -35,5 +35,19 @@ html, body {
 }
 
 .green {
-  background-color: #228B22;
+  background: #4ca18d;
+}
+
+button {
+  display: inline-block;
+  background: #aaa;
+  border-radius: 3px;
+  color: #fff;
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+  font-size: 15px;
+  line-height: 25px;
+  text-decoration: none;
+  font-weight: normal;
 }
