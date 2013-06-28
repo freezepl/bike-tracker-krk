@@ -2,12 +2,10 @@
 <script>
   var map, pointarray, heatmap;
 
-  var bikeData = [
-    <% @locations.each do |loc| %>
-      new google.maps.LatLng(<%= loc[1] %>, <%= loc[2] %>),
-    <% end %>
-    new google.maps.LatLng(50.06178, 19.93759)
-  ];
+  var bikeData = _.map(<%= raw(@coordinates.to_json) %>, function(coordinates) {
+    return (new google.maps.LatLng(coordinates[0], coordinates[1]));
+  });
+  bikeData.push(new google.maps.LatLng(50.06178, 19.93759));
 
   function initialize() {
     var mapOptions = {
