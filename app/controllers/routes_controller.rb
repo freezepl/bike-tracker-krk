@@ -1,6 +1,6 @@
 class RoutesController < ApplicationController
   skip_before_filter :verify_authenticity_token
-  def save_route
+  def create
     @route = Route.new(:uuid => params[:uuid], :locations => params[:locations])
     if @route.save
       render :nothing => true, :status => :ok
@@ -10,10 +10,6 @@ class RoutesController < ApplicationController
   end
 
   def index
-    @routes = Route.all
-  end
-
-  def map
     @routes = Route.all
   end
 
