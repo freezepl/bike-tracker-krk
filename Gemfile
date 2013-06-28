@@ -9,6 +9,7 @@ gem 'rails', '3.2.13'
 gem 'mongoid', "~> 3.1.4"
 gem 'thin', '~> 1.5.1'
 gem 'underscore-rails', '~> 1.4.4'
+gem 'draper', '~> 1.2.1'
 
 # Gems used only for assets and not required
 # in production environments by default.
