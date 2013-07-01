@@ -7,6 +7,9 @@ gem 'rails', '3.2.13'
 
 # gem 'sqlite3'
 gem 'mongoid', "~> 3.1.4"
+gem 'thin', '~> 1.5.1'
+gem 'underscore-rails', '~> 1.4.4'
+gem 'draper', '~> 1.2.1'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -22,22 +25,11 @@ end
 
 gem 'jquery-rails'
 
-group :development do
-  gem 'hirb'
+group :development, :test do
   gem 'awesome_print'
+  gem 'hirb'
+  gem 'rspec-rails'
+  gem 'pry-rails'
+  gem 'better_errors'
+  gem 'binding_of_caller'
 end
-
-# To use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.0.0'
-
-# To use Jbuilder templates for JSON
-# gem 'jbuilder'
-
-# Use unicorn as the app server
-# gem 'unicorn'
-
-# Deploy with Capistrano
-# gem 'capistrano'
-
-# To use debugger
-# gem 'debugger'
